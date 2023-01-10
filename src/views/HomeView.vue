@@ -1,13 +1,16 @@
 <script setup>
+import SiteHero from '../components/SiteHero.vue';
+import SiteHeader from '../components/SiteHeader.vue';
+import SiteFooter from '../components/SiteFooter.vue'
+
 
 </script>
 
 <template>
     <div class="main-container">
-        <h1>Welcome to Blockfuster Corporations!</h1>
-        <RouterLink to="/login" custom v-slot="{ navigate }">
-    <button @click="navigate" role="link">Login</button>
-</RouterLink>
+        <SiteHeader></SiteHeader>
+        <SiteHero></SiteHero>
+        <SiteFooter></SiteFooter>
     </div>
 </template>
 

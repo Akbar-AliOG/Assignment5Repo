@@ -19,7 +19,13 @@ console.log(info)
     <div class="modal-outer-container" @click.self="emits('toggleModal')">
       <div class="modal-inner-container">
         <button class="close-button" @click="emits('toggleModal')">X</button>
-        <h1>{{ info.data.overview }}</h1>
+        <img :src="`https://image.tmdb.org/t/p/w500${info.data.poster_path}`" alt="">
+        <div class="text">
+          <h1>Overview:{{ info.data.original_title }}</h1>
+          <h3>Release Date:{{ info.data.release_date}}</h3>
+          <h3>Overview:{{ info.data.overview}}</h3>
+        </div>
+        <iframe :src="`https://www.youtube.com/embed/${info.data.videos.results.filter((video) => video.type === 'Trailer').at(0).key}`"></iframe>
       </div>
     </div>
   </Teleport>
@@ -56,5 +62,15 @@ console.log(info)
   font-weight: bold;
   font-size: 1.25rem;
   color: white;
+}
+
+img{
+  float: left;
+  width: 200px;
+}
+
+iframe{
+  width: 200px;
+  height: 150px;
 }
 </style>
