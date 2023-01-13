@@ -6,24 +6,26 @@ const username = ref("");
 const password = ref("");
 const error = ref(false);
 const login = () => {
-//   if (username.value === "tmdb" && password.value === "movies") {
+  if (username.value === "tmdb" && password.value === "movies") {
     router.push("/real");
-//   } else {
-//     error.value = true;
-//   }
+  } else {
+    error.value = true;
+  }
 };
 </script>
 
 <template>
   <div class="home-container">
-    <h1>Home</h1>
+    <h1>Login</h1>
     <form @submit.prevent="login()">
       <input type="text" v-model="username" placeholder="Username" />
       <input type="password" v-model="password" placeholder="Password" />
       <input type="submit" value="Login" />
     </form>
     <div v-if="error" class="error">
-      <p>Incorrect username/password!</p>
+      <p>Try Again!</p>
+      <p>Hint:The username is the database you are trying to reach!</p>
+      <p>Hint:The password is what you are trying to get more info about!</p>
     </div>
   </div>
 </template>
@@ -37,7 +39,6 @@ const login = () => {
   width: 100vw;
   height: 100vh;
   font-size: 4rem;
-  background-color: rgb(239, 32, 13);
   padding: 0%;
   margin: 0;
 }
@@ -51,4 +52,17 @@ form input {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
+
+h1{
+  color: bisque;
+}
+
+p{
+  font-size: large;
+  color: bisque;
+  text-align: center;
+}
+
+
 </style>

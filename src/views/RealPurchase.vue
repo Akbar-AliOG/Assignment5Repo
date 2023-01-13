@@ -32,9 +32,9 @@ console.log(data)
 
 <style scoped>
 img{
-  width: 330px;
+  width: 269px;
   margin-top: 15px;
-  margin-right: 25px;
+  margin-right:27px;
   border: 10px solid; 
   border-image-source: linear-gradient(45deg,red, blue);
   border-image-slice: 1;

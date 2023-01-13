@@ -21,7 +21,7 @@ console.log(info)
         <button class="close-button" @click="emits('toggleModal')">X</button>
         <img :src="`https://image.tmdb.org/t/p/w500${info.data.poster_path}`" alt="">
         <div class="text">
-          <h1>Overview:{{ info.data.original_title }}</h1>
+          <h1>Title:{{ info.data.original_title }}</h1>
           <h3>Release Date:{{ info.data.release_date}}</h3>
           <h3>Overview:{{ info.data.overview}}</h3>
         </div>
@@ -32,6 +32,8 @@ console.log(info)
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 .modal-outer-container {
   position: fixed;
   top: 0;
@@ -65,12 +67,22 @@ console.log(info)
 }
 
 img{
+  margin-top: 50px;
   float: left;
   width: 200px;
+  padding-right: 5px;
 }
 
 iframe{
-  width: 200px;
+  width: 400px;
   height: 150px;
+}
+
+.text{
+  padding-left: 5px;
+}
+
+h1{
+  font-family: 'Oswald', sans-serif;
 }
 </style>

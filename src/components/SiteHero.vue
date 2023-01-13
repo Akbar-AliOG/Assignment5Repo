@@ -4,7 +4,7 @@
 
 <template>
     <div class="content-wrapper">
-        <img src="../hero.PNG" alt="">
+        <img src="./hero.PNG" alt="">
     </div>
 </template>
 
@@ -28,7 +28,7 @@ body{
     width: 100%;
     top: 100px;
 }
-/* 
+
 .text{
     color: rgb(250, 248, 248);
     position: absolute;
@@ -37,7 +37,7 @@ body{
     font-family: 'Russo One', sans-serif;
     font-size: 55px;
 
-} */
+}
 
 
 </style>

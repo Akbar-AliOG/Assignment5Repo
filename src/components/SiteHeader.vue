@@ -37,6 +37,7 @@
 .text{
     color: rgb(250, 248, 248);
     font-family: 'Russo One', sans-serif;
+    color: bisque;
     
 }
 
